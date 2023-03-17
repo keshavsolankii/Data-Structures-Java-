@@ -12,15 +12,15 @@ class Solution {
         int cnt = 1;
         while(tail.next != null)
         {
-            tail = tail.next;
+            tail = tail.next; // To have a record of tail in order to add the nodes at the end
             cnt++;
         }
         
-        while(cnt>0)
+        while(cnt>0)    // Loop should run for as much number of times as their are elements in the linked list
         {
             if(curr.val%2 == 0)
             {
-                temp = curr.next;
+                temp = curr.next; // To detaching the node and attaching at the end if it is even
                 tail.next = curr;
                 curr.next = null;
                 tail = tail.next;
@@ -28,7 +28,7 @@ class Solution {
                 prev.next = curr;
             }
             else{
-                prev = curr;
+                prev = curr;    // If it is odd then just update the prev and curr
                 curr = curr.next;
             }
             cnt--;
