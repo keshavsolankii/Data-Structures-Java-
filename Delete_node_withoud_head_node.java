@@ -10,8 +10,6 @@ class Solution {
         // node.next.next = null;
         }
         else
-        {
-            node = null;
-        }
+           node = null;
     }
 }
