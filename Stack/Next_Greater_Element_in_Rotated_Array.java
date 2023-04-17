@@ -3,9 +3,9 @@ class Solution {
         int[] ans = new int[nums.length];
         Stack<Integer> st = new Stack<>();
         
-        for(int i=2*nums.length; i>=0; i--)
+        for(int i=2*nums.length; i>=0; i--)     // T.C = O(2n)
         {
-            while(!st.isEmpty() && st.peek() <= nums[i%nums.length]) //Modulo is used for maintaining the size of array
+            while(!st.isEmpty() && st.peek() <= nums[i%nums.length]) //Modulo is used for maintaining the size of array     --> T.C = O(2n)
                 st.pop();
             
             if(i<nums.length)
@@ -20,3 +20,5 @@ class Solution {
         return ans;
     }
 }
+
+// Total T.C = O(n)
